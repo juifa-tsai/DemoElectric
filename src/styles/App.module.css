@@ -1,0 +1,234 @@
+:root {
+  --c-deep: #00344A;
+  --c-green: #20AF24;
+  --c-ink: #1d1936;
+  --c-bg: #F5F5F5;
+  --c-mute: #DEDEDE;
+  --c-white: #ffffff;
+}
+
+.app {
+  min-height: 100vh;
+  background-color: var(--c-bg);
+  color: var(--c-ink);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.header {
+  background: var(--c-white);
+  border-bottom: 1px solid var(--c-mute);
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--c-deep);
+  margin: 0;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.timeGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.timeLabel {
+  font-size: 0.875rem;
+  color: var(--c-deep);
+  font-weight: 500;
+}
+
+.timeInput {
+  padding: 0.5rem;
+  border: 1px solid var(--c-mute);
+  border-radius: 4px;
+  font-size: 0.875rem;
+}
+
+.configButton {
+  background: var(--c-green);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.configButton:hover {
+  background: #1a8f1e;
+}
+
+.fileInput {
+  font-size: 0.875rem;
+}
+
+.mainContent {
+  display: flex;
+  position: relative;
+}
+
+.drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 320px;
+  height: 100vh;
+  background: var(--c-white);
+  border-left: 1px solid var(--c-mute);
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.drawer.open {
+  transform: translateX(0);
+}
+
+.drawerOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.drawerOverlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.pageContent {
+  flex: 1;
+  padding: 2rem;
+  transition: margin-right 0.3s ease;
+}
+
+.tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--c-mute);
+}
+
+.tab {
+  background: none;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  font-weight: 500;
+  color: var(--c-ink);
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+}
+
+.tab:hover {
+  color: var(--c-green);
+}
+
+.tab.active {
+  color: var(--c-green);
+  border-bottom-color: var(--c-green);
+}
+
+.card {
+  background: var(--c-white);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cardTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--c-deep);
+}
+
+.summaryTiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.tile {
+  background: var(--c-white);
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tileValue {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--c-green);
+  margin-bottom: 0.5rem;
+}
+
+.tileLabel {
+  font-size: 0.875rem;
+  color: var(--c-ink);
+  font-weight: 500;
+}
+
+.inputTime {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.inputLabel {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--c-deep);
+}
+
+.inputValue {
+  font-size: 0.875rem;
+  color: var(--c-ink);
+  font-weight: 600;
+}
+
+.disclaimer {
+  margin-top: 2rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-left: 4px solid var(--c-green);
+  font-size: 0.875rem;
+  color: var(--c-ink);
+}

@@ -1,0 +1,116 @@
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.inputGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--c-deep);
+}
+
+.input {
+  padding: 0.5rem;
+  border: 1px solid var(--c-mute);
+  border-radius: 4px;
+  font-size: 0.875rem;
+  width: 80px;
+}
+
+.runButton {
+  background: var(--c-green);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.runButton:hover {
+  background: #1a8f1e;
+}
+
+.runButton:disabled {
+  background: var(--c-mute);
+  cursor: not-allowed;
+}
+
+.candidatesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.candidateCard {
+  background: var(--c-white);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid var(--c-green);
+}
+
+.candidateTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--c-deep);
+  margin-bottom: 0.5rem;
+}
+
+.candidateGain {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--c-green);
+  margin-bottom: 1rem;
+}
+
+.candidateDetails {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.candidateHours {
+  grid-column: 1 / -1;
+  font-size: 0.75rem;
+  color: var(--c-ink);
+  background: var(--c-bg);
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+.exportButton {
+  background: var(--c-deep);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+  margin-bottom: 1rem;
+}
+
+.exportButton:hover {
+  background: #002a38;
+}
+
+.chartContainer {
+  background: var(--c-white);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 400px;
+}
