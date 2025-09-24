@@ -56,8 +56,8 @@ const ExpectedGainPage: React.FC<ExpectedGainPageProps> = ({
       {
         label: 'Clearing Price (P₀)',
         data: gains.map(gain => gain.P0),
-        borderColor: '#FF6B35',
-        backgroundColor: 'rgba(255, 107, 53, 0.1)',
+        borderColor: '#3B82F6',
+        backgroundColor: 'rgba(59, 130, 246, 0.1)',
         tension: 0.1,
         fill: false,
         yAxisID: 'y1'
